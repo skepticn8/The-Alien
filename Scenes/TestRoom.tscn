@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Other/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Other/Transporter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Actors/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Parallax/ParallaxBackground.png" type="Texture" id=5]
+[ext_resource path="res://Other/SaveSystem.tscn" type="PackedScene" id=6]
+
+[node name="TestRoom" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 67, 1, 0, 74, 0, 0, 75, 0, 0, 76, 0, 0, 77, 0, 0, 78, 0, 0, 79, 0, 0, 80, 0, 0, 87, 1, 0, 65602, 1, 0, 65603, 1, 0, 65623, 1, 0, 65624, 1, 0, 131137, 1, 0, 131138, 1, 0, 131139, 1, 0, 131159, 1, 0, 131160, 1, 0, 131161, 1, 0, 196672, 1, 0, 196673, 1, 0, 196674, 1, 0, 196675, 1, 0, 196695, 1, 0, 196696, 1, 0, 196697, 1, 0, 196698, 1, 0, 262207, 1, 0, 262208, 1, 0, 262209, 1, 0, 262210, 1, 0, 262211, 1, 0, 262231, 1, 0, 262232, 1, 0, 262233, 1, 0, 262234, 1, 0, 262235, 1, 0, 327742, 1, 0, 327743, 1, 0, 327744, 1, 0, 327745, 1, 0, 327746, 1, 0, 327747, 1, 0, 327767, 1, 0, 327768, 1, 0, 327769, 1, 0, 327770, 1, 0, 327771, 1, 0, 327772, 1, 0, 393277, 1, 0, 393278, 1, 0, 393279, 1, 0, 393280, 1, 0, 393281, 1, 0, 393282, 1, 0, 393283, 1, 0, 393303, 1, 0, 393304, 1, 0, 393305, 1, 0, 393306, 1, 0, 393307, 1, 0, 393308, 1, 0, 393309, 1, 0, 393333, 0, 0, 393334, 0, 0, 393335, 0, 0, 393336, 0, 0, 393337, 0, 0, 393338, 0, 0, 393339, 0, 0, 393340, 0, 0, 393341, 0, 0, 393342, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 458779, 0, 0, 458780, 0, 0, 458781, 0, 0, 458782, 0, 0, 458783, 0, 0, 458784, 0, 0, 458785, 0, 0, 458786, 0, 0, 458787, 0, 0, 458788, 0, 0, 458795, 0, 0, 458796, 0, 0, 458797, 0, 0, 458798, 0, 0, 458799, 0, 0, 458800, 0, 0, 458801, 0, 0, 458802, 0, 0, 458803, 0, 0, 458804, 0, 0, 458805, 0, 0, 458806, 0, 0, 458807, 0, 0, 458808, 0, 0, 458809, 0, 0, 458810, 0, 0, 458811, 0, 0, 458812, 0, 0, 458813, 0, 0, 458814, 0, 0, 458815, 0, 0, 458816, 0, 0, 458817, 0, 0, 458818, 0, 0, 458819, 0, 0, 458839, 0, 0, 458840, 0, 0, 458841, 0, 0, 458842, 0, 0, 458843, 0, 0, 458844, 0, 0, 458845, 0, 0, 458846, 0, 0, 458847, 0, 0, 458848, 0, 0, 458849, 0, 0, 458850, 0, 0, 458851, 0, 0, 458852, 0, 0, 458853, 0, 0, 458854, 0, 0, 458855, 0, 0, 458856, 0, 0, 458857, 0, 0, 458858, 0, 0, 458859, 0, 0, 458860, 0, 0, 458861, 0, 0, 458862, 0, 0, 458863, 0, 0, 458886, 0, 0, 458887, 0, 0, 458888, 0, 0, 458889, 0, 0, 458890, 0, 0, 458891, 0, 0, 458892, 0, 0, 458893, 0, 0, 458894, 0, 0, 458895, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 300 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1894, 416 )
+
+[node name="Transporter" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9181, 411 )
+chngto = "res://Scenes/TestRoom.tscn"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1920, 1080 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, -150 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="SaveSystem" parent="." instance=ExtResource( 6 )]

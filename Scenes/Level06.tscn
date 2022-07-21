@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Other/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Other/Transporter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Actors/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Parallax/ParallaxBackground.png" type="Texture" id=5]
+[ext_resource path="res://Other/SaveSystem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Music/Level06.wav" type="AudioStream" id=7]
+
+[node name="Level06" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458774, 0, 0, 458781, 0, 0, 458782, 0, 0, 458789, 0, 0, 458790, 0, 0, 458791, 0, 0, 458798, 0, 0, 458799, 0, 0, 458800, 0, 0, 458801, 0, 0, 458808, 0, 0, 458809, 0, 0, 458810, 0, 0, 458811, 0, 0, 458812, 0, 0, 458819, 0, 0, 458820, 0, 0, 458821, 0, 0, 458822, 0, 0, 458823, 0, 0, 458824, 0, 0, 458831, 0, 0, 458832, 0, 0, 458833, 0, 0, 458834, 0, 0, 458835, 0, 0, 458836, 0, 0, 458837, 0, 0, 458844, 0, 0, 458845, 0, 0, 458846, 0, 0, 458847, 0, 0, 458848, 0, 0, 458849, 0, 0, 458850, 0, 0, 458851, 0, 0, 458858, 0, 0, 458859, 0, 0, 458860, 0, 0, 458861, 0, 0, 458862, 0, 0, 458863, 0, 0, 458864, 0, 0, 458865, 0, 0, 458866, 0, 0, 458873, 0, 0, 458874, 0, 0, 458875, 0, 0, 458876, 0, 0, 458877, 0, 0, 458878, 0, 0, 458879, 0, 0, 458880, 0, 0, 458881, 0, 0, 458882, 0, 0, 458889, 0, 0, 458890, 0, 0, 458891, 0, 0, 458892, 0, 0, 458893, 0, 0, 458894, 0, 0, 458895, 0, 0, 458896, 0, 0, 458897, 0, 0, 458898, 0, 0, 458899, 0, 0, 458906, 0, 0, 458907, 0, 0, 458908, 0, 0, 458909, 0, 0, 458910, 0, 0, 458911, 0, 0, 458912, 0, 0, 458913, 0, 0, 458914, 0, 0, 458915, 0, 0, 458916, 0, 0, 458917, 0, 0, 458924, 0, 0, 458925, 0, 0, 458926, 0, 0, 458927, 0, 0, 458928, 0, 0, 458929, 0, 0, 458930, 0, 0, 458931, 0, 0, 458932, 0, 0, 458933, 0, 0, 458934, 0, 0, 458935, 0, 0, 458936, 0, 0, 458943, 0, 0, 458944, 0, 0, 458945, 0, 0, 458946, 0, 0, 458947, 0, 0, 458948, 0, 0, 458949, 0, 0, 458950, 0, 0, 458951, 0, 0, 458952, 0, 0, 458953, 0, 0, 458954, 0, 0, 458955, 0, 0, 458956, 0, 0, 458963, 0, 0, 458964, 0, 0, 458965, 0, 0, 458966, 0, 0, 458967, 0, 0, 458968, 0, 0, 458969, 0, 0, 458970, 0, 0, 458971, 0, 0, 458972, 0, 0, 458973, 0, 0, 458974, 0, 0, 458975, 0, 0, 458976, 0, 0, 458977, 0, 0, 458984, 0, 0, 458985, 0, 0, 458986, 0, 0, 458987, 0, 0, 458988, 0, 0, 458989, 0, 0, 458990, 0, 0, 458991, 0, 0, 458992, 0, 0, 458993, 0, 0, 458994, 0, 0, 458995, 0, 0, 458996, 0, 0, 458997, 0, 0, 458998, 0, 0, 458999, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512, 300 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8070, 416 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9124, 416 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10247, 416 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 11423, 416 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 12670, 416 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 13975, 416 )
+
+[node name="Transporter" parent="." instance=ExtResource( 2 )]
+position = Vector2( 15835, 413 )
+chngto = "res://Scenes/Level07.tscn"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1920, 1080 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, -150 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="SaveSystem" parent="." instance=ExtResource( 6 )]
+
+[node name="Level06Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true

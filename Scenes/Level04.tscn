@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Other/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Actors/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Other/Transporter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Parallax/ParallaxBackground.png" type="Texture" id=5]
+[ext_resource path="res://Other/SaveSystem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Music/Level04.wav" type="AudioStream" id=7]
+
+[node name="Level04" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458836, 0, 0, 458837, 0, 0, 458838, 0, 0, 458839, 0, 0, 458840, 0, 0, 458841, 0, 0, 458842, 0, 0, 458843, 0, 0, 458844, 0, 0, 458845, 0, 0, 458846, 0, 0, 458847, 0, 0, 458848, 0, 0, 458849, 0, 0, 458850, 0, 0, 458851, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524357, 0, 0, 524358, 0, 0, 524359, 0, 0, 524360, 0, 0, 524361, 0, 0, 524362, 0, 0, 524363, 0, 0, 524364, 0, 0, 524365, 0, 0, 524366, 0, 0, 589862, 0, 0, 589863, 0, 0, 589864, 0, 0, 589865, 0, 0, 589866, 0, 0, 589867, 0, 0, 589868, 0, 0, 589869, 0, 0, 589870, 0, 0, 589871, 0, 0, 589878, 0, 0, 589879, 0, 0, 589880, 0, 0, 589881, 0, 0, 589882, 0, 0, 589883, 0, 0, 589884, 0, 0, 589885, 0, 0, 589886, 0, 0, 589887, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512, 300 )
+
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2757, 544 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3778, 544 )
+
+[node name="Transporter" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6365, 411 )
+chngto = "res://Scenes/Level05.tscn"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1920, 1080 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, -150 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="SaveSystem" parent="." instance=ExtResource( 6 )]
+
+[node name="Level04Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
