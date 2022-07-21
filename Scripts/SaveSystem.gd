@@ -5,7 +5,7 @@ var save_path = "user://savefile.tasf"
 func save_game():
 	var save_file = File.new()
 	
-	save_file.open(save_path, File.WRITE)
+	save_file.open_encrypted_with_pass(save_path, File.WRITE, "devpass")
 	
 	save_file.store_string(get_parent().get_filename())
 	
@@ -14,7 +14,7 @@ func save_game():
 func load_game():
 	var save_file = File.new()
 	
-	save_file.open(save_path, File.READ)
+	save_file.open_encrypted_with_pass(save_path, File.READ, "devpass")
 	
 	var content = save_file.get_as_text()
 	
