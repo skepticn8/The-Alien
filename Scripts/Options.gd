@@ -1,5 +1,13 @@
 extends Control
 
+func _ready():
+	$FSOn.grab_focus()
+	$Controls.grab_focus()
+	$BTMM.grab_focus()
+	$VSOn.grab_focus()
+	$VSOff.grab_focus()
+	$FSOff.grab_focus()
+
 func _on_FSOn_pressed():
 	OS.window_fullscreen = true
 
